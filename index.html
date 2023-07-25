@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css"/>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <body>
+    <div
+      class="container-fluid outercontainer"
+    >
+      <div
+        class="row innercontainer"
+      >
+        <h1 class="mainHeading">ClassWiz</h1>
+        <div
+          class="row display"
+        >
+          <input
+            id="inputbox"
+            type="text"
+            class="inputbox"
+            placeholder="INPUT"
+          />
+          <h1 id="resultbox">Result</h1>
+        </div>
+        <div class="col-6 nopad">
+          <div class="col-12 btns">
+            <button class="btns" onclick="onNumPressed(1)">
+              1
+            </button>
+            <button class="btns" onclick="onNumPressed(2)">
+              2
+            </button>
+            <button class="btns" onclick="onNumPressed(3)">
+              3
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button class="btns" onclick="onNumPressed(4)">
+              4
+            </button>
+            <button class="btns" onclick="onNumPressed(5)">
+              5
+            </button>
+            <button class="btns" onclick="onNumPressed(6)">
+              6
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button class="btns" onclick="onNumPressed(7)">
+              7
+            </button>
+            <button class="btns" onclick="onNumPressed(8)">
+              8
+            </button>
+            <button class="btns" onclick="onNumPressed(9)">
+              9
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button class="btns" onclick="onNumPressed(0)">
+              0
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button
+              class="btns"
+              onclick="onNumPressed(`sqrt(`)"
+            >
+              &radic;
+            </button>
+            <button class="btns" onclick="onNumPressed(`e`)">
+              e
+            </button>
+          </div>
+        </div>
+        <div class="col-6 nopad">
+          <div class="col-12 btns">
+            <button class="btns" onclick="onSignPressed(`+`)">
+              +
+            </button>
+            <button class="btns" onclick="onSignPressed(`-`)">
+              -
+            </button>
+            <button class="btns" onclick="onSignPressed(`*`)">
+              *
+            </button>
+            <button class="btns" onclick="onSignPressed(`/`)">
+              /
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button
+              class="btns"
+              onclick="onSignPressed(`sin(`)"
+            >
+              sin
+            </button>
+            <button
+              class="btns"
+              onclick="onSignPressed(`cos(`)"
+            >
+              cos
+            </button>
+            <button
+              class="btns"
+              onclick="onSignPressed(`tan(`)"
+            >
+              Tan
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button class="btns" onclick="onSignPressed(`(`)">
+              (
+            </button>
+            <button class="btns" onclick="onSignPressed(`)`)">
+              )
+            </button>
+            <button class="btns" onclick="onSignPressed(`^`)">
+              ^
+            </button>
+          </div>
+          <div class="col-12 btns">
+            <button class="btns" onclick="onSignPressed(`.`)">
+              .
+            </button>
+            <button class="btns" onclick="onSignPressed(`pi`)">
+              &Pi;
+            </button>
+            <button class="btns" onclick="onEqualPressed()">=</button>
+          </div>
+          <div class="col-12 btns">
+            <button class="btns" onclick="clearAll()">Clear All</button>
+            <button class="btns" onclick="clearRecent()">Clear Recent</button>
+          </div>
+        </div>
+
+        <h4 class="variableHeading">
+          Create a Variable
+        </h4>
+        <div class="col-12 variable">
+          <input
+            id="uservar"
+            type="text"
+            class="variableInput"
+            placeholder="Name your Variable"
+          />
+        </div>
+        <div class="col-12 variable">
+          <input
+            id="uservarval"
+            type="text"
+            class="variableValue"
+            placeholder="Enter value of Variable"
+          />
+        </div>
+        <div class="col-12 variable">
+          <button
+            class="addvarbtn"
+            onclick="addvar()"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
